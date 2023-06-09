@@ -27,3 +27,5 @@ npm run build
 ```bash
 npx surge dist <yourdomain>.surge.sh
 ```
+
+### ProiectFinalFLOWER.surge.sh

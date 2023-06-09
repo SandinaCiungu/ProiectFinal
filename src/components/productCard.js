@@ -2,9 +2,8 @@ import "./style.css";
 
 export const createProductCard = (product) => `
    <div class="card">
-      <img src=${product.image} />
-      <p>${product.name}</p>
-      <span>${product.price} RON</span>
-      <a href="/src/pages/details/details.html?id=${product.id}">VEZI DETALII</a>
+      <a href="src/pages/details/details.html?id=${product.id}">  <img src=${product.image} />  </a> 
+      <p>   ${product.name}</p>           </a>
+      <span>${product.price} RON</span>   </a>    
    </div>
 `;

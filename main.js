@@ -4,7 +4,7 @@ import { createProductCard } from "./src/components/productCard";
 
 window.addEventListener("DOMContentLoaded", async () => {
   const products = await getProducts();
-  console.log(products.sort((a, b) => a.name - b.name));
+  //console.log(products.sort((a, b) => a.name - b.name));
   document.getElementById("products").innerHTML = products
     //.sort((a, b) => a.name - b.name)
     .map((product) => createProductCard(product))

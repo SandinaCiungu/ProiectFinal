@@ -1,43 +1,12 @@
 .card {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border-radius: 5px;
+  font-family: "Roboto";
   padding: 5px;
-  width: 300px;
+  width: 270px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  vertical-align: bottom;
-  border: 1px solid white;
+  font-size: 18px;
 }
-.card:hover {
-  border: 1px solid darkcyan;
-}
-
-.card img {
-  height: 300px;
-}
-
-.card p {
-  font-size: 15px;
-}
-.card span {
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.card a {
-  font-size: 15px;
-  text-decoration: none;
-  background-color: darkcyan;
-  color: black;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.card a:hover {
-  color: lightcyan;
-}
-
-.details {
-  width: 100%;
+.card a img {
+  height: 260px;
 }
