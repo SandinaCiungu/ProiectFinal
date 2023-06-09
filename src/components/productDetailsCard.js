@@ -6,5 +6,6 @@ export const createProductDetailsCard = (product) => `
       <img src=${product.image} />
       <p>${product.price}</p>      
       <p>${product.description}</p>
+      <button class="add-to-cart-btn">Add To Cart</button>
    </div>
 `;
