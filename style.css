@@ -8,46 +8,50 @@ body {
 #app {
   display: grid;
   grid-template-areas:
-    "header header header"
-    "navbar ordonare ordonare"
-    "navbar produse produse"
-    "footer footer footer";
+    "navbar navbar"
+    "filtru-culoare ordonare"
+    "filtru-culoare produse"
+    "footer footer";
 }
 #navbar {
-  grid-area: header;
+  grid-area: navbar;
   font-size: 13px;
-  height: 200.5px;
-  background: linear-gradient(
-    to bottom,
-    #292929 35px,
-    #f7f7f7 35px 70px,
-    white 70px 190px,
-    gray 190px 191px,
-    white 191px 220px,
-    gray 220px
-  );
-  color: lightgrey;
-  padding: 10px;
+  padding: 0px;
   opacity: 0.9;
 }
 #navbar1 {
+  padding: 8px;
+  margin: 0;
+  background: #292929;
+  color: lightgrey;
   display: flex;
   justify-content: space-between;
 }
 #navbar2 {
-  height: 27px;
+  padding: 8px;
+  margin: 0;
+  background: #f7f7f7;
 }
 #navbar3 {
-  height: 110px;
+  padding: 8px;
+  margin: 0;
+  background: white;
 }
 #navbar3 img {
+  padding: -5px;
   height: 120px;
+  clip-path: inset(17% 20% 16% 21%);
 }
 #navbar4 {
+  padding: 5px;
+  margin: 0;
+  background: white;
   color: #292929;
   font-size: 17px;
   display: flex;
   justify-content: space-evenly;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
 }
 #menu1,
 #menu2 {
@@ -108,9 +112,8 @@ body {
   cursor: pointer;
 }
 #filtru-culoare {
-  grid-area: navbar;
+  grid-area: filtru-culoare;
   padding: 15px;
-  width: 150px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -124,7 +127,10 @@ body {
 }
 .sortare {
   background-color: #f7f7f7;
-  padding: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
 }
 .sortare:hover {
   font-weight: bold;
@@ -138,16 +144,12 @@ body {
   justify-items: center;
 }
 #footer {
+  margin: 0;
   grid-area: footer;
-  background: linear-gradient(
-    to bottom,
-    #292929 300px,
-    white 300px 500px,
-    #292929 500px
-  );
-  height: 100vh;
 }
 #footer1 {
+  margin: 0;
+  background-color: #292929;
   padding: 20px;
   font-size: 17px;
   color: lightgrey;
@@ -156,18 +158,190 @@ body {
   height: 120px;
 }
 #footer21 {
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 #footer2 {
+  margin: 0;
+  padding: 20px;
+  background: white;
   display: flex;
   justify-content: space-evenly;
   text-decoration: none;
 }
 #footer3 {
+  margin: 0;
+  padding: 20px;
+  background: #292929;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: lightgray;
+}
+/*widescreen - la fel ca mai sus*/
+/*@media (min-width: 1201px) {
+  #app {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "navbar ordonare"
+      "navbar produse"
+      "footer footer";
+  }
+}*/
+/*laptop*/
+@media (min-width: 1001px) and (max-width: 1250px) {
+  #app {
+    display: grid;
+    grid-template-areas:
+      "navbar navbar"
+      "filtru-culoare ordonare"
+      "filtru-culoare produse"
+      "footer footer";
+  }
+  #products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+/*tablet*/
+@media (min-width: 701px) and (max-width: 1000px) {
+  #app {
+    display: grid;
+    grid-template-areas:
+      "navbar navbar"
+      "filtru-culoare ordonare"
+      "filtru-culoare produse"
+      "footer footer";
+  }
+  #search-bar {
+    width: 200px;
+  }
+  #search-text {
+    width: 300px;
+  }
+  #mini-menu {
+    font-size: 13px;
+  }
+  #navbar4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  #titlu-ordonare {
+    display: none;
+  }
+  #ordonare {
+    margin: 0;
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    border-bottom: 1px solid gray;
+  }
+  .sortare {
+    width: fit-content;
+  }
+  #products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #footer3 p {
+    text-align: center;
+  }
+}
+/*smartphone*/
+@media (max-width: 700px) {
+  #app {
+    display: grid;
+    grid-template-areas:
+      "navbar"
+      "filtru-culoare"
+      "ordonare"
+      "produse"
+      "footer";
+  }
+  #products {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #navbar3 img {
+    height: 50px;
+  }
+  #menu1 li:first-of-type,
+  #menu1 li:nth-of-type(2) {
+    display: none;
+  }
+  #menu3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #menu4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #mini-menu {
+    font-size: 13px;
+  }
+  #search-bar {
+    width: 200px;
+  }
+  #search-text {
+    width: 300px;
+  }
+  #navbar4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  #titlu-culoare {
+    display: none;
+  }
+  #filtru-culoare {
+    margin: 0;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px solid gray;
+  }
+  #titlu-ordonare {
+    display: none;
+  }
+  #ordonare {
+    margin: 0;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    border-bottom: 1px solid gray;
+  }
+  .sortare {
+    width: fit-content;
+  }
+  #products {
+    margin: 0;
+    padding: 0;
+  }
+  #footer2 {
+    margin: 0;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  #footer21 {
+    display: none;
+  }
+  #footer3 {
+    padding: 15px;
+    gap: 20px;
+  }
+  #footer3 p {
+    text-align: center;
+  }
 }

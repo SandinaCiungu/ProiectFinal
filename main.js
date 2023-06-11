@@ -120,3 +120,7 @@ async function filtreazaDupaNume() {
     .map((product) => createProductCard(product))
     .join("");
 }
+
+document.window.addEventListener("resize", (event) => {
+  console.log(document.innerHeight, document.innerWidth);
+});
