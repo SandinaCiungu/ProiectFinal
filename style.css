@@ -83,7 +83,6 @@ body {
   text-decoration: none;
 }
 #search-bar {
-  width: 300px;
   position: relative;
 }
 #search-text {
@@ -100,7 +99,7 @@ body {
   font-size: 25px;
   position: absolute;
   top: 0;
-  right: -80px;
+  left: 360px;
   z-index: 2;
   top: 6px;
   cursor: pointer;
@@ -180,6 +179,91 @@ body {
   align-items: center;
   color: lightgray;
 }
+
+/*start pt cart*/
+#cart {
+  padding: 10px;
+}
+.cant {
+  width: 800px;
+  padding: 10px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+#h-nume {
+  width: 300px;
+  padding-right: 340px;
+}
+#h-pret {
+  width: 300px;
+  padding-right: 70px;
+}
+#h-cant {
+  width: 300px;
+  padding-right: 60px;
+}
+#h-subttl {
+  width: 300px;
+}
+.cant img {
+  width: 150px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.cart-nume {
+  width: 250px;
+}
+.cart-pret,
+.cart-subtotal {
+  width: 150px;
+  padding-right: 30px;
+  text-align: right;
+}
+.cart-cantitate {
+  height: 40px;
+  width: 120px;
+  background-color: #f7f7f7;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.quantity {
+  padding: 5px;
+  border: none;
+  width: 60px;
+  background-color: #f7f7f7;
+  font-size: 25px;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+}
+.decrement-quantity,
+.increment-quantity {
+  padding: 5px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  width: 30px;
+}
+.increment-quantity {
+  left: 100px;
+}
+#h-titlu {
+  width: 300px;
+  padding-right: 550px;
+}
+#h-ttl {
+  width: 300px;
+}
+/*end pt cart*/
+
 /*widescreen - la fel ca mai sus*/
 /*@media (min-width: 1201px) {
   #app {
@@ -215,12 +299,6 @@ body {
       "filtru-culoare ordonare"
       "filtru-culoare produse"
       "footer footer";
-  }
-  #search-bar {
-    width: 200px;
-  }
-  #search-text {
-    width: 300px;
   }
   #mini-menu {
     font-size: 13px;
@@ -267,9 +345,6 @@ body {
     display: grid;
     grid-template-columns: 1fr;
   }
-  #navbar3 img {
-    height: 50px;
-  }
   #menu1 li:first-of-type,
   #menu1 li:nth-of-type(2) {
     display: none;
@@ -286,12 +361,6 @@ body {
   }
   #mini-menu {
     font-size: 13px;
-  }
-  #search-bar {
-    width: 200px;
-  }
-  #search-text {
-    width: 300px;
   }
   #navbar4 {
     display: flex;
