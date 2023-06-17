@@ -20,7 +20,9 @@ const showProducts = async () => {
       document.getElementById("cart").innerHTML += `<div class="cant" id="p${
         product.id
       }">
-            <img src=${productInfo.image} />
+            <a href="../details/details.html?id=${
+              productInfo.id
+            }">  <img class="poza-prod" src=${productInfo.image} />  </a> 
             <span class="cart-nume">${productInfo.name}</span>
             <span class="cart-pret">${Number(productInfo.price)} Lei</span>
             <div class="cart-cantitate">
