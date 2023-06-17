@@ -46,11 +46,3 @@ export function getProductQuantityFromLocalStorage(id, cartArray) {
 
   return product.quantity;
 }
-
-export function refreshProductSubtotal(id, cartArray) {
-  const product = cartArray.find((product) => product.id === id);
-
-  if (product != undefined) {
-    product.quantity++;
-  }
-}

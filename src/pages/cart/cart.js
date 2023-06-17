@@ -9,9 +9,7 @@ import {
 const showProducts = async () => {
   const cart = localStorage.getItem("cart");
   const products = JSON.parse(cart);
-  //const totalCos = 0;
-  document.getElementById("cart").innerHTML = `<h2>COS DE CUMPARATURI</h2>`;
-  document.getElementById("cart").innerHTML += `<div class="cant"> <h3>
+  document.getElementById("cart").innerHTML = `<div class="cant"> <h3>
                       <span id="h-nume">Produs</span>
                       <span id="h-pret">Pret</span>
                       <span id="h-cant">Cantitate</span>
@@ -34,33 +32,31 @@ const showProducts = async () => {
               Number(productInfo.price) * Number(product.quantity)
             } Lei</span>
       </div>`;
-      //totalCos += Number(productInfo.price) * Number(product.quantity);
     });
   });
-  /*document.getElementById("cart").innerHTML += `<div class="cant">
-                    <h3>
-                      <span id="h-titlu">Total comanda</span>
-                      <span id="h-subttl">${totalCos} Lei</span>
-                    </h3>
-                  </div>`;*/
 };
 window.addEventListener("load", showProducts);
-//document.querySelector("button").addEventListener("click", showTotal);
 
-/*
+document.getElementById("afis-total").addEventListener("click", showTotal);
+document
+  .getElementById("finalizeaza")
+  .addEventListener("click", finalizeazaComanda);
+
 function showTotal() {
-  console.log("aici");
-  const products = document.querySelectorAll(".cant");
+  const productsSubttl = document.querySelectorAll(".cart-subtotal");
   let total = 0;
-  for (let i = 0; i <= products.length - 1; i++) {
-    total +=
-      Number(
-        products.querySelector(".cart-pret").innerHTML.replace(" Lei", "")
-      ) * Number(products.querySelector(".quantity").innerHTML);
+  for (let i = 0; i <= productsSubttl.length - 1; i++) {
+    total += Number(productsSubttl[i].innerHTML.replace(" Lei", ""));
   }
-  console.log(total);
+  document.getElementById("val-total").innerHTML = total + " Lei";
 }
-*/
+
+function finalizeazaComanda() {
+  window.alert("Va multumim pentru comanda plasata, va mai asteptam!");
+  document.getElementById("cart").innerHTML = "";
+  localStorage.removeItem("cart");
+  document.getElementById("val-total").innerHTML = "0 Lei";
+}
 
 document.getElementById("cart").addEventListener("click", async (e) => {
   const cartArray = JSON.parse(localStorage.getItem("cart"));
@@ -108,4 +104,5 @@ function refreshProductSubtotal(id) {
           .querySelector(".quantity").innerHTML
       ) +
     " Lei";
+  showTotal();
 }
