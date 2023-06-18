@@ -18,88 +18,203 @@
     <title>Admin</title>
   </head>
   <body>
-    <br id="app">
-      <div id="navbar">
-        <div id="navbar1">
-          <ul id="menu1">
-            <li>PROGRAM LIVRARI: L-V 08:00 - 20:00, S-D 09:00 - 18:00</li>
-            <li>|</li>
-            <li id="email">
-              <a href="mailto:comenzi@domeniu.ro"
-                ><i class="fa-regular fa-envelope" style="color: lightgrey"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/" target="_blank"
-                ><i class="fa-brands fa-facebook" style="color: lightgrey"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/" target="_blank"
-                ><i class="fa-brands fa-instagram" style="color: lightgrey"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/" target="_blank"
-                ><i class="fa-brands fa-youtube" style="color: lightgrey"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.tiktok.com/" target="_blank"
-                ><i class="fa-brands fa-tiktok" style="color: lightgrey"></i
-              ></a>
-            </li>
-          </ul>
-          <ul id="menu2">
-            <li>
-              <i class="fa-solid fa-phone" style="color: lightgrey"></i> 0700
-              700 700
-            </li>
-            <li>
-              <a href="../../../index.html"
-                ><i class="fa-solid fa-house" style="color: lightgrey"></i
-              ></a>
-            </li>
-          </ul>
+    <br id="app" />
+    <div id="navbar">
+      <div id="navbar1">
+        <ul id="menu1">
+          <li>PROGRAM LIVRARI: L-V 08:00 - 20:00, S-D 09:00 - 18:00</li>
+          <li>|</li>
+          <li id="email">
+            <a href="mailto:comenzi@domeniu.ro"
+              ><i class="fa-regular fa-envelope" style="color: lightgrey"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/" target="_blank"
+              ><i class="fa-brands fa-facebook" style="color: lightgrey"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank"
+              ><i class="fa-brands fa-instagram" style="color: lightgrey"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/" target="_blank"
+              ><i class="fa-brands fa-youtube" style="color: lightgrey"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/" target="_blank"
+              ><i class="fa-brands fa-tiktok" style="color: lightgrey"></i
+            ></a>
+          </li>
+        </ul>
+        <ul id="menu2">
+          <li>
+            <i class="fa-solid fa-phone" style="color: lightgrey"></i> 0700 700
+            700
+          </li>
+          <li>
+            <a href="../../../index.html"
+              ><i class="fa-solid fa-house" style="color: lightgrey"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div id="navbar2">
+        <ul id="menu3">
+          <li>Aranjamente florale, Buchete</li>
+          <li>Sustinem Producatorii Locali</li>
+          <li>LIVRARE GRATUITA - Comenzi peste 300 lei</li>
+          <li>AMBALARE GRATUITA</li>
+        </ul>
+      </div>
+      <div id="navbar3">
+        <ul id="menu4">
+          <li>
+            <a href="../../../index.html">
+              <img
+                src="https://www.creativefabrica.com/wp-content/uploads/2021/01/20/Lotus-Flower-Logo-Design-Vector-isolated-Graphics-7912829-1.jpg"
+                alt="LOGO"
+              />
+            </a>
+          </li>
+          <li id="mini-menu">
+            <a href="../admin/admin.html">
+              <i class="fa-solid fa-user" style="color: #292929"></i>
+              Admin
+            </a>
+            <a href="../cart/cart.html">
+              <i class="fa-solid fa-cart-shopping" style="color: #292929"></i>
+              Cosul meu
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="modif-add-form" style="display: none">
+      <div id="titlu-form">
+        <div id="context-form">
+          <h2>Introducere produs nou</h2>
+          <span></span>
         </div>
-        <div id="navbar2">
-          <ul id="menu3">
-            <li>Aranjamente florale, Buchete</li>
-            <li>Sustinem Producatorii Locali</li>
-            <li>LIVRARE GRATUITA - Comenzi peste 300 lei</li>
-            <li>AMBALARE GRATUITA</li>
-          </ul>
-        </div>
-        <div id="navbar3">
-          <ul id="menu4">
-            <li>
-              <a href="../../../index.html">
-                <img
-                  src="https://www.creativefabrica.com/wp-content/uploads/2021/01/20/Lotus-Flower-Logo-Design-Vector-isolated-Graphics-7912829-1.jpg"
-                  alt="LOGO"
-                />
-              </a>
-            </li>
-            <li id="mini-menu">
-              <a href="../admin/admin.html">
-                <i class="fa-solid fa-user" style="color: #292929"></i>
-                Admin
-              </a>
-              <a href="../cart/cart.html">
-                <i class="fa-solid fa-cart-shopping" style="color: #292929"></i>
-                Cosul meu
-              </a>
-            </li>
-          </ul>
+        <div id="btn-form">
+          <button id="save-form">+ Salveaza</button
+          ><button id="undo-form">Anuleaza</button>
         </div>
       </div>
+      <div id="id-form"><label>ID</label><span id="id-produs">#</span></div>
+      <div id="imagine-form">
+        <label>Imagine</label
+        ><input
+          type="text"
+          name=""
+          id="imagine-produs"
+          placeholder="Introduceti calea catre imaginerea produsului"
+        />
+      </div>
+      <div id="name-form">
+        <label>Nume</label
+        ><input
+          type="text"
+          name=""
+          id="nume-produs"
+          placeholder="Introduceti numele produsului"
+        />
+      </div>
+      <div id="category-form">
+        <label>Categorie</label
+        ><input
+          type="text"
+          name=""
+          id="categorie-produs"
+          placeholder="Introduceti categoria produsului"
+        />
+      </div>
+      <div id="color-form">
+        <label>Culoare</label
+        ><input
+          type="text"
+          name=""
+          id="culoare-produs"
+          placeholder="Introduceti culoarea produsului"
+        />
+      </div>
+      <div id="type-form">
+        <label>Tip</label
+        ><input
+          type="text"
+          name=""
+          id="tip-produs"
+          placeholder="Introduceti tipul produsului"
+        />
+      </div>
+      <div id="description-form">
+        <label>Descriere</label>
+        <textarea
+          name="message"
+          rows="3"
+          cols="114"
+          id="descriere-produs"
+          placeholder="Introduceti descrierea produsului"
+        ></textarea>
+      </div>
+      <div id="ingrijire-form">
+        <label>Ingrijire</label
+        ><textarea
+          name="message"
+          rows="3"
+          cols="114"
+          id="ingrijire-produs"
+          placeholder="Introduceti cateva cuvinte despre modul de ingrijire a produsului"
+        ></textarea>
+      </div>
+      <div id="continut-form">
+        <label>Continut</label
+        ><input
+          type="text"
+          name=""
+          id="continut-produs"
+          placeholder="Introduceti continutul produsului"
+        />
+      </div>
+      <div id="accesorii-form">
+        <label>Accesorii</label
+        ><input
+          type="text"
+          name=""
+          id="accesorii-produs"
+          placeholder="Introduceti accesoriile produsului"
+        />
+      </div>
+      <div id="price-form">
+        <label>Pret</label
+        ><input
+          type="text"
+          name=""
+          id="pret-produs"
+          placeholder="Introduceti pretul produsului"
+        />
+      </div>
+    </div>
 
-    <table>
+    <table id="administrare">
+      <span id="titlu-admin"
+        ><h2>GESTIONARE PRODUSE</h2>
+        <button id="add-product">+ ADAUGA PRODUS NOU</button></span
+      >
       <thead>
-        <th>Poza</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Delete</th>
+        <th>ID</th>
+        <th>Imagine</th>
+        <th>Nume</th>
+        <th>Categorie</th>
+        <th>Culoare</th>
+        <th>Tip</th>
+        <th>Pret</th>
+        <th>EDITARE</th>
+        <th>STERGERE</th>
       </thead>
       <tbody id="products-table-body"></tbody>
     </table>
@@ -109,16 +224,15 @@
         <p>Florari din 2023.</p>
         <br />
         <p>
-          Sunt atatea feluri de flori, buchete si aranjamente, dar dintre
-          toate, pe cele de la Floraria FLOWER le recunosti dintr-o singura
-          privire.
+          Sunt atatea feluri de flori, buchete si aranjamente, dar dintre toate,
+          pe cele de la Floraria FLOWER le recunosti dintr-o singura privire.
         </p>
         <br />
         <p>
           Acest lucru nu este intamplator, ci se cuvine sa il datoram timpului
-          indelungat pe care l-am petrecut in compania florilor,
-          intelegandu-le prin simtire si manuindu-le cu talentul pe care tot
-          ele ni l-au croit unul fara cusur.
+          indelungat pe care l-am petrecut in compania florilor, intelegandu-le
+          prin simtire si manuindu-le cu talentul pe care tot ele ni l-au croit
+          unul fara cusur.
         </p>
         <br />
         <p>
@@ -127,14 +241,14 @@
         </p>
         <br />
         <p>
-          Va marturisim ca in fiecare zi recunoastem in emotiile oamenilor ce
-          ne trec pragul nerabdarea cu care asteapta sa se implineasca o
-          dorinta sau un basm, in care florile fac parte din decor.
+          Va marturisim ca in fiecare zi recunoastem in emotiile oamenilor ce ne
+          trec pragul nerabdarea cu care asteapta sa se implineasca o dorinta
+          sau un basm, in care florile fac parte din decor.
         </p>
         <br />
         <p>
-          Povestea continua in fiecare zi si suntem atat de fericiti ca si
-          noi, si voi, suntem personajele ei principale!
+          Povestea continua in fiecare zi si suntem atat de fericiti ca si noi,
+          si voi, suntem personajele ei principale!
         </p>
       </div>
       <div id="footer2">
@@ -146,8 +260,8 @@
             />
           </a>
           <p>
-            <i class="fa-solid fa-phone" style="color: lightgrey"></i> 0700
-            700 700
+            <i class="fa-solid fa-phone" style="color: lightgrey"></i> 0700 700
+            700
           </p>
         </div>
         <div id="footer22">
@@ -196,7 +310,6 @@
         </p>
       </div>
     </div>
-  </div>
-  <script type="module" src="admin.js"></script>
-</body>
+    <script type="module" src="admin.js"></script>
+  </body>
 </html>

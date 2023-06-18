@@ -7,6 +7,7 @@ import {
 } from "../../utils/cart";
 
 const showProducts = async () => {
+  document.getElementById("val-total").innerHTML = "0";
   const cart = localStorage.getItem("cart");
   const products = JSON.parse(cart);
   document.getElementById("cart").innerHTML = `<div class="cant"> <h3>
@@ -34,6 +35,9 @@ const showProducts = async () => {
               Number(productInfo.price) * Number(product.quantity)
             } Lei</span>
       </div>`;
+      document.getElementById("val-total").innerHTML =
+        Number(document.getElementById("val-total").innerHTML) +
+        Number(productInfo.price) * Number(product.quantity);
     });
   });
 };
