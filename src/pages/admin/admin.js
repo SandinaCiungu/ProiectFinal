@@ -86,16 +86,16 @@ async function onClick2(e) {
   tabel.style.display = "none";
 
   idProdus.innerHTML = "#";
-  imagineProdus.innerHTML = "";
-  numeProdus.innerHTML = "";
-  categorieProdus.innerHTML = "";
-  culoareProdus.innerHTML = "";
-  tipProdus.innerHTML = "";
-  descriereProdus.innerHTML = "";
-  ingrijireProdus.innerHTML = "";
-  continutProdus.innerHTML = "";
-  accesoriiProdus.innerHTML = "";
-  pretProdus.innerHTML = "";
+  imagineProdus.value = "";
+  numeProdus.value = "";
+  categorieProdus.value = "";
+  culoareProdus.value = "";
+  tipProdus.value = "";
+  descriereProdus.value = "";
+  ingrijireProdus.value = "";
+  continutProdus.value = "";
+  accesoriiProdus.value = "";
+  pretProdus.value = "";
   document.querySelector("#context-form h2").innerHTML =
     "Introducere produs nou";
   formular.style.display = "block";
@@ -107,16 +107,16 @@ async function onClick3() {
     formular.style.display = "none";
 
     const response = await insertProduct(
-      numeProdus.innerHTML,
-      categorieProdus.innerHTML,
-      imagineProdus.innerHTML,
-      Number(pretProdus.innerHTML),
-      tipProdus.innerHTML,
-      descriereProdus.innerHTML,
-      culoareProdus.innerHTML,
-      ingrijireProdus.innerHTML,
-      continutProdus.innerHTML,
-      accesoriiProdus.innerHTML
+      numeProdus.value,
+      categorieProdus.value,
+      imagineProdus.value,
+      Number(pretProdus.value),
+      tipProdus.value,
+      descriereProdus.value,
+      culoareProdus.value,
+      ingrijireProdus.value,
+      continutProdus.value,
+      accesoriiProdus.value
     );
     tableBody.innerHTML += createProductTableRow(response);
     tabel.style.display = "block";
@@ -152,10 +152,9 @@ async function onClick3() {
       categorieProdus.value;
     liniaCurenta.querySelector("td:nth-of-type(5)").innerHTML =
       culoareProdus.value;
-    liniaCurenta.querySelector("td:nth-of-type(6)").innerHTML =
-      tipProdus.innevaluerHTML;
+    liniaCurenta.querySelector("td:nth-of-type(6)").innerHTML = tipProdus.value;
     liniaCurenta.querySelector("td:nth-of-type(7)").innerHTML =
-      pretProdus.value;
+      pretProdus.value + " Lei";
     liniaCurenta.querySelector(
       "td:nth-of-type(8)"
     ).innerHTML = `<button class='modify-product'>Editare</button>`;
@@ -180,6 +179,7 @@ async function onClick3() {
 }
 
 async function onClick4() {
+  //butonul de cancel
   formular.style.display = "none";
   tabel.style.display = "block";
 }

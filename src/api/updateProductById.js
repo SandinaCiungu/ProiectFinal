@@ -15,6 +15,9 @@ export const updateProductById = async (
 ) => {
   const response = await fetch(`${productsURL}/${id}`, {
     method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify({
       name: name1,
       category: category1,

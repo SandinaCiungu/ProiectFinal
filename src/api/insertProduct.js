@@ -14,6 +14,9 @@ export const insertProduct = async (
 ) => {
   const response = await fetch(productsURL, {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify({
       name: name1,
       category: category1,
